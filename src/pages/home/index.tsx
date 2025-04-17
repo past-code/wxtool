@@ -181,7 +181,7 @@ const Home = () => {
                 {result.user_version && <p>审核版本: {result.user_version}</p>}
                 {result.submit_audit_time && (
                   <p>
-                    提交审核的时间: {formatTimestamp(result.submit_audit_time)}
+                    提交审核的时间: {formatTimestamp(result.submit_audit_time*1000)}
                   </p>
                 )}
               </>
