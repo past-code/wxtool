@@ -8,7 +8,7 @@ const instance = axios.create({
 
 instance.interceptors.response.use(
   (response: AxiosResponse) => {
-    if (response.request?.requestURL.startsWith('https://api.weixin.qq.com')) {
+    if (response.request?.responseURL.startsWith('https://api.weixin.qq.com')) {
       return Promise.resolve(response.data || response);
     }
     // eslint-disable-next-line eqeqeq
